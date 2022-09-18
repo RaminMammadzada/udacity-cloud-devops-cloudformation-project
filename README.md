@@ -1,5 +1,5 @@
 ## Project Title: Deploy a high-availability web app using CloudFormation
-This repositoru includes the solution scripts and screenshots for Udacity Cloud Devops Nanodegree - Course 2 Project. 
+This repository includes the solution scripts and screenshots for Udacity Cloud Devops Nanodegree - Course 2 Project. 
 It is a Cloudformation stack creation project that implements the Infrastructure as Code  project, taking the high-availability and security principles into account. YAML templates are used throughout the project for building the cloud infrastructure, as required for the project. The parameters are in the JSON files thought. You can find the requirements below.
 
 <br >
