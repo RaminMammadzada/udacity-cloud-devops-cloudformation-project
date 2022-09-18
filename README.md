@@ -1,10 +1,10 @@
-### Project Title - Deploy a high-availability web app using CloudFormation
+## Project Title: Deploy a high-availability web app using CloudFormation
 This repositoru includes the solution scripts and screenshots for Udacity Cloud Devops Nanodegree - Course 2 Project. 
 It is a Cloudformation stack creation project that implements the Infrastructure as Code  project, taking the high-availability and security principles into account. YAML templates are used throughout the project for building the cloud infrastructure, as required for the project. The parameters are in the JSON files thought. You can find the requirements below.
 
 <br >
 
-## Server specs
+### Server specs
 
 1. Developer need to create a Launch Configuration for your application servers in order to deploy four servers, two located in each of your private subnets. The launch configuration will be used by an auto-scaling group.
 
@@ -12,7 +12,7 @@ It is a Cloudformation stack creation project that implements the Infrastructure
 
 3. Be sure to allocate at least 10GB of disk space so that you don't run into issues.
 
-## Security Groups and Roles
+### Security Groups and Roles
 
 1. Since the application archive will be downloaded from an S3 Bucket, an IAM Role will be needed to be created that allows your instances to use the S3 Service.
 
@@ -26,7 +26,7 @@ It is a Cloudformation stack creation project that implements the Infrastructure
 
 <br >
 
-## Project Setup
+### Project Setup
 
 - Create network stack with Cloudformation script:
 
