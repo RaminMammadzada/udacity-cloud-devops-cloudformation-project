@@ -1,10 +1,18 @@
-### Project Title - Deploy a high-availability web app using CloudFormation
-This repositoru includes the solution scripts and screenshots for Udacity Cloud Devops Nanodegree - Course 2 Project. 
-It is a Cloudformation stack creation project that implements the Infrastructure as Code  project, taking the high-availability and security principles into account. YAML templates are used throughout the project for building the cloud infrastructure, as required for the project. The parameters are in the JSON files thought. You can find the requirements below.
+## Deployment of high-availability web app using CloudFormation
+
+ This project creates a CloudFormation stack using Infrastructure as Code principles while prioritizing high-availability and security considerations. The cloud infrastructure is built using YAML templates, as required for the project, with some parameters stored in JSON files.
+
+ This repository includes the solution scripts and screenshots for Udacity Cloud Devops Nanodegree - Course 2 Project.
 
 <br >
 
-## Server specs
+### Architechture
+
+![screenshot](./diagram.jpeg)
+
+### Requirements implemented
+
+### Server specs
 
 1. Developer need to create a Launch Configuration for your application servers in order to deploy four servers, two located in each of your private subnets. The launch configuration will be used by an auto-scaling group.
 
@@ -12,7 +20,7 @@ It is a Cloudformation stack creation project that implements the Infrastructure
 
 3. Be sure to allocate at least 10GB of disk space so that you don't run into issues.
 
-## Security Groups and Roles
+### Security Groups and Roles
 
 1. Since the application archive will be downloaded from an S3 Bucket, an IAM Role will be needed to be created that allows your instances to use the S3 Service.
 
@@ -26,28 +34,26 @@ It is a Cloudformation stack creation project that implements the Infrastructure
 
 <br >
 
-## Project Setup
+### Project Setup
 
-- Create network stack with Cloudformation script:
+- A network stack is created with a Cloudformation script.
 
-```./cliCommands/create.sh udacityCldDvpsC2NetworkStack network.yml network-parameters.json```
-
-
-- Create servers stack with Cloudformation script:
-
-```./cliCommands/create.sh udacityCldDvpsC2ServersStack servers.yml server-parameters.json```
+     ```./cliCommands/create.sh udacityCldDvpsC2NetworkStack network.yml network-parameters.json```
 
 
-- After updating the scripts, you can run update command:
+- A servers stack is created with a Cloudformation script:
 
-```./cliCommands/update.sh udacityCldDvpsC2ServersStack servers.yml server-parameters.json```
+    ```./cliCommands/create.sh udacityCldDvpsC2ServersStack servers.yml server-parameters.json```
 
-- When you want to remove all of the resousces you created you can run delete command and remove the cloudformation stack you created:
 
-```./cliCommands/delete.sh udacityCldDvpsC2ServersStack```
+- The update command can be run after updating the scripts:
 
-- You can visit the EC2 page in AWS console and click Load Balancer in the left panel. You can find the DNS name of load balancer under Description tab. In my own AWS account, I run that script and created a load balancer with the following dns name:
+    ```./cliCommands/update.sh udacityCldDvpsC2ServersStack servers.yml server-parameters.json```
 
-    http://udaci-webap-czffj7hi77p1-1772300060.eu-central-1.elb.amazonaws.com/
+- The delete command removes all the resources and the Cloudformation stack that was created:
 
-    I have shared this link for reviewer to check the result of my project. It will not be alive when you click it in future, definitely, because of its costs.
+    ```./cliCommands/delete.sh udacityCldDvpsC2ServersStack```
+
+- You can visit the EC2 page in AWS console and click Load Balancer in the left panel. You can find the DNS name of load balancer under Description tab. The DNS name in my case is [http://udaci-webap-czffj7hi77p1-1772300060.eu-central-1.elb.amazonaws.com/](http://udaci-webap-czffj7hi77p1-1772300060.eu-central-1.elb.amazonaws.com/)
+
+    **I have shared this link for reviewer in Udacity to check the result of my project. It will not be available when you click it in future, definitely, due to of its cost.**
